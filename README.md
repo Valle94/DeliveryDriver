@@ -1,7 +1,7 @@
 # DeliveryDriver
 
 Changelog 09/13/24:
-Progressed through lesson 2.13
+- Progressed through lesson 2.13
 - Added and resized assets to fit the game environment
 - Created colliders for all objects
 - Laid out the first "level" of the game
