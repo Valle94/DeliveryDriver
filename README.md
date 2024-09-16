@@ -1,6 +1,14 @@
 # DeliveryDriver
 
-**Changelog 09/14/24**
+**Changelog (In Class) 09/16/24:**
+- Capped maximum fuel to 100; previously you could drive over the fuel pickup and have more than 100 fuel even though the bar doesn't go past full.
+- In "FollowCamera.cs" is an optional line of code to make the camera rotate with the player.
+
+**Known Issues**
+- When fuel is empty and you hit an obstacle or boost, you effectively stop moving until the timer associated with that trigger is up.
+
+
+**Changelog 09/14/24:**
 - Finished all "Delivery Driver" Lessons
 - Set camera to follow the Driver as they move around the map
 - Used "ifs" and bools to provide logic for changing color when packages are picked up
@@ -15,14 +23,15 @@
 - Restructure variables to operate on a baseSpeed and have boosts and obstacles be multipliers of the base speed
 - Create Tutorial level that leads to main level up completion
 
-Changelog 09/13/24:
+
+**Changelog 09/13/24:**
 - Progressed through lesson 2.13
 - Added and resized assets to fit the game environment
 - Created colliders for all objects
 - Laid out the first "level" of the game
 - Added boundary walls with colliders to keep the player contained to the intended area
 
-Changelog (In Class) 09/011/24:
+**Changelog (In Class) 09/011/24:**
 - Progressed through lesson 2.11
 - Created the ""Driver" and added scripting for player movement
 - Added collision to the "Driver"; tested using scripts that trigger on collision or trigger
