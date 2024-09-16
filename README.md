@@ -12,6 +12,7 @@
 - When fuel is empty and you hit an obstacle or boost, you effectively stop moving until the timer associated with that trigger is up. 
 
 **To do**
+- Restructure variables to operate on a baseSpeed and have boosts and obstacles be multipliers of the base speed
 - Create Tutorial level that leads to main level up completion
 
 Changelog 09/13/24:
