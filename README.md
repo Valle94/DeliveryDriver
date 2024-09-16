@@ -8,6 +8,9 @@
 - Added a fuel system with UI elements. Fuel drains as the player moves, and if the tank is empty, speed is reduced significantly
 - Fuel can be picked up using collision triggers as well
 
+**Known Bugs**
+- When fuel is empty and you hit an obstacle or boost, you effectively stop moving until the timer associated with that trigger is up. 
+
 **To do**
 - Create Tutorial level that leads to main level up completion
 
