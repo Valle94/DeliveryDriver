@@ -9,8 +9,8 @@ public class Driver : MonoBehaviour
     //Starting Variables
     [SerializeField] float steerSpeed = 600f;
     [SerializeField] float moveSpeed = 20f;
-    [SerializeField] float slowSpeed = 10f;
-    [SerializeField] float boostSpeed = 30f;
+    [SerializeField] float slowSpeed = 0.5f;
+    [SerializeField] float boostSpeed = 1.5f;
     [SerializeField] float emptySpeed = 0.2f;
     [SerializeField] float fuel = 100f;
     [SerializeField] float fuelBurnRate = 20f;
@@ -33,7 +33,7 @@ public class Driver : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            moveSpeed = slowSpeed;
+            moveSpeed = moveSpeed * slowSpeed;
             //Slow down for this amount of seconds
             timer = 2;
         }
@@ -46,7 +46,7 @@ public class Driver : MonoBehaviour
         {
             //Optional destroy boost on pickup:
             //Destroy(other.gameObject);
-            moveSpeed = boostSpeed;
+            moveSpeed = moveSpeed * boostSpeed;
             //Boost for this amount of seconds
             timer = 3;
         }
@@ -67,8 +67,8 @@ public class Driver : MonoBehaviour
         //boost/slow timer iteration
         timer -= Time.deltaTime;
 
-        //When boost timer is up, return speed to normal
-        if (timer <=0)
+        //When boost or obstacle timer is up, return speed to normal
+        if (timer <= 0)
         {
             moveSpeed = 20f;
         }
@@ -83,6 +83,10 @@ public class Driver : MonoBehaviour
         if (currentFuel <= 0)
         {
             currentFuel = 0;
+        }
+        else if (currentFuel >= 100)
+        {
+            currentFuel = 100;
         }
         if (currentFuel == 0)
         {
